@@ -11,7 +11,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 	bst_t *new;
 
 	if (!tree)
-		return NULL;
+		return (NULL);
 
 	if (!*tree)
 	{
