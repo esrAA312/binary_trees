@@ -1,7 +1,6 @@
-
 #include "binary_trees.h"
 /**
- * binary_tree_is_leaf
+ * binary_tree_is_leaf- know if a node is a leaf
  * @node: node to study
  * Return: 1 if it is a leaf or 0 if it is not
  */

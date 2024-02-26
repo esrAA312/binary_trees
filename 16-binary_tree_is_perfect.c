@@ -26,9 +26,9 @@ const binary_tree_t *get_leaf(const binary_tree_t *tree)
 	if (binary_tree_is_leaf(tree) == 1)
 		return (tree);
 	if (tree->left)
-		return get_leaf(tree->left);
+		return (get_leaf(tree->left));
 	else
-		return get_leaf(tree->right);
+		return (get_leaf(tree->right));
 }
 
 /**
@@ -42,6 +42,7 @@ int is_perfect(const binary_tree_t *tree,
 		size_t D, size_t L)
 {
 	int per_L, per_R;
+
 	if (binary_tree_is_leaf(tree))
 		return (L == D);
 	if (!(tree->left) || !(tree->right))
