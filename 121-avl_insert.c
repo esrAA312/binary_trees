@@ -8,15 +8,17 @@
  * Return: pointer to the created node, or NULL on failure
  */
 avl_t *avl_insert(avl_t **tree, int value)
+
 {
+	int balance;
+	avl_t *parent = NULL;
+	    avl_t *current = *tree;
+	        avl_t *new_node = NULL;
+
 	if (!tree || !value)
 		return NULL;
 
-	avl_t *parent = NULL;
-	avl_t *current = *tree;
-	avl_t *new_node = NULL;
-
-	while (current != NULL)
+		while (current != NULL)
 	{
 		parent = current;
 
@@ -47,7 +49,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 
 	while (current != NULL)
 	{
-		int balance = binary_tree_balance(current);
+		balance = binary_tree_balance(current);
 
 		if (balance > 1 && value < current->left->n)
 			*tree = binary_tree_rotate_right(*tree);
