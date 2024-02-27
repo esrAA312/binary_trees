@@ -16,7 +16,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 	        avl_t *new_node = NULL;
 
 	if (!tree || !value)
-		return NULL;
+		return (NULL);
 
 		while (current != NULL)
 	{
@@ -27,17 +27,17 @@ avl_t *avl_insert(avl_t **tree, int value)
 		else if (value > current->n)
 			current = current->right;
 		else
-			return NULL; // Duplicate value, not allowed in AVL tree
+			return (NULL;)
 	}
 
 	new_node = binary_tree_node(parent, value);
 	if (new_node == NULL)
-		return NULL;
+		return (NULL);
 
 	if (*tree == NULL)
 	{
 		*tree = new_node;
-		return new_node;
+		return (new_node);
 	}
 
 	if (value < parent->n)
@@ -69,6 +69,6 @@ avl_t *avl_insert(avl_t **tree, int value)
 		current = current->parent;
 	}
 
-	return new_node;
+	return (new_node);
 }
 
