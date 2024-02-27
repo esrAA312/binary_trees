@@ -1,15 +1,17 @@
 #include "binary_trees.h"
 int get_successor(avl_t *node);
 int replacesuccessor(avl_t *root);
-int get_successor(avl_t *node);
+int removen(avl_t *node);
+
 /**
- * bal - Measures balance factor of a AVL
- * @tree: tree to go through
- * Return: balanced factor
+ * get_successor - Get the minimum value in the right subtree.
+ * @node: The node to start the search.
+ * Return: The minimum value.
  */
-void bal(avl_t **tree)
+int get_successor(bst_t *node)
 {
-	int le;
+	int le
+		;
 	if (node == NULL)
 		return (0);
 
@@ -22,7 +24,7 @@ void bal(avl_t **tree)
  * @root: The node with two children.
  * Return: The value of the successor.
  */
-int replacesuccessor(avl_t *root)
+int replacesuccessor(bst_t *root)
 {
 	int X;
 
@@ -67,7 +69,7 @@ int removen(avl_t *node)
 }
 
 /**
- * bst_remove - Remove a node from a AVL tree.
+ * avl_remove - Remove a node from a AVL tree.
  * @root: The root of the tree.
  * @value: The value of the node to remove.
  * Return: The updated tree.

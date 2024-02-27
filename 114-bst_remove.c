@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 int get_successor(bst_t *node);
 int replacesuccessor(bst_t *root);
-int get_successor(bst_t *node);
+int removen(bst_t *node);
 
 /**
  * get_successor - Get the minimum value in the right subtree.
