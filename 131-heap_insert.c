@@ -6,10 +6,12 @@
  * @value: value to store in the node to be inserted
  * Return: a pointer to the created node or NULL
  */
-heap_t *heap_insert(heap_t **tree, int value)
+heap_t *heap_insert(heap_t **root, int value)
 {
 	heap_t *new;
+	heap_t **tree;
 
+	tree=root;
 	if (!tree)
 		return (NULL);
 
