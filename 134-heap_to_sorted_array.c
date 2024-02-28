@@ -11,5 +11,5 @@ int *heap_to_sorted_array(heap_t *heap, size_t *size)
 	if (!heap || !size)
 		return (NULL);
 
-	return (heap);
+	return (0);
 }
